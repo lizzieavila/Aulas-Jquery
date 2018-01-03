@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Eventos</title>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+  crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			//incluir a codificação javascript aqui
+
+        $(document).ready(function(){
+
+        	$('#div1').click(function(){
+        		alert('Elemento foi clicado');
+        		//eventos mouse:
+				//.click()
+				//.dbclick()
+				//.mouseover()
+				//.mouseout()
+
+				//eventos teclado:
+				//.keydown() ao pressionar botao
+				//.keypress() nao conta algumas teclas como alt,shift,ctrl,esc
+				//.keyup() ao soltar
+
+				//eventos forms:
+				//.focus() ao receber foco
+				//.blur() ao perder foco
+				//.change()
+				//.mouseout()
+				
+        	});
+
+        });
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="div1" style="height:150px;width:150px;background:#ccc ">
+			
+		</div>
+		
+
+	</body>
+</html>
