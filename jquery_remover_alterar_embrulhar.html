@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Remover, alterar e embrulhar</title>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+  crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			//incluir a codificação javascript aqui
+
+        $(function(e){
+        	$("li:last").remove();
+
+        	
+        	$("li:first").replaceWith("<li>Curso 44</li>");
+        	$("ul").wrapAll("<div style='border:1px solid #ccc'></div>");
+        	
+
+        });
+			
+		</script>
+	</head>
+
+	<body>
+		<h1></h1>
+		
+		<ul id="lista_cursos">
+			<li>CURSO 1</li>
+			<li>CURSO 2</li>
+			<li>CURSO 3</li>
+			<li>CURSO 4</li>
+			
+
+		</ul>
+
+	</body>
+</html>
