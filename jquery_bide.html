@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Eventos</title>
+		<style type="text/css">
+		#janela{border:1px solid black;width: 200px;height: 200px;margin: 10px
+
+		}	
+
+		</style>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+  crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			//incluir a codificação javascript aqui
+
+       function aplicarCor(e){
+       	$cor = e.data.cor;
+       
+        $('#janela').css("background-color",$cor);
+       }
+
+       $(function(e){
+
+       $('#azul').bind("click",{cor:'blue'},aplicarCor);
+       $('#vermelho').bind("click",{cor:'red'},aplicarCor);
+       $('#verde').bind("click",{cor:'green'},aplicarCor);
+
+       });
+      
+			
+		</script>
+	</head>
+
+	<body>
+		<input type="submit" id="azul" value="azul">
+		<input type="submit" id="vermelho" value="vermelho">
+		<input type="submit" id="verde" value="verde">
+
+		
+		
+		
+		
+
+		<div id="janela"></div>
+
+	</body>
+</html>
