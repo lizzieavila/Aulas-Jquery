@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Eventos</title>
+		<style type="text/css">
+		#janela{position:absolute;width: 200px;height: 200px;background-color: aquamarine;
+		}	
+
+		</style>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+  crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			//incluir a codificação javascript aqui
+
+       function moverObjeto(){
+       	$('#janela').animate({left:300
+
+       	},1000);
+       }
+
+       	$(function(e){
+       		$('#direita').click(moverObjeto);
+
+       	});
+       	
+  
+       
+
+
+			
+		</script>
+	</head>
+
+	<body>
+		<input class="btn btn-success"  type="button" id="direita" value="direita">
+		
+
+		
+		
+		
+		
+
+		<div id="janela"></div>
+
+	</body>
+</html>
