@@ -1,20 +1,41 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title></title>
+
+<style type="text/css">
+ 
+ #primeira{width: 300px; height: 800px; background-color: aquamarine   
+ }  
+#segunda{width: 300px; height: 800px; background-color: pink  
+ }   
+
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function (){
             $("#click").click(function (){
                 $('html, body').animate({
-                    scrollTop: $("#div1").offset().top
-                }, 2000);
+                    scrollTop: $("#primeira").offset().top
+                }, 1000);
+            });
+            $("#click2").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#segunda").offset().top
+                }, 1000);
             });
         });
     </script>
-    <div id="div1" style="height: 1000px; width 100px;background:red">
-        Test
-    </div>
-    <br/>
-    <div id="div2" style="height: 1000px; width 100px;background:green">
-        Test 2
-    </div>
-    <button id="click">Click me</button>
+
+</head>
+    <body>
+    
+    <div id="primeira"><button class="button btn-success" id="click2">Click me</button></div>
+    <div id="segunda"> <button class="button btn-success" id="click">Click me</button></div>
+    
+
+ </body>   
 </html>
