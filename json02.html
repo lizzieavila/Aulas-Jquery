@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>atributos</title>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+  crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			//incluir a codificação javascript aqui
+			//ex 01 chamar json
+
+       $.$.getJSON('produtos.json', function(data) {
+       		var elemento;
+
+       		elemento= "<ul>";
+       		$.each(data, function(i, valor){
+       			elemento += "<li>" + valor.nomeproduto + "<>";
+       		});
+       		elemento += "</ul>";
+       		
+       		$('#listagem').html(elemento);
+       });
+			
+		</script>
+	</head>
+
+	<body>
+		<div id="listagem"></div>
+		
+
+	</body>
+</html>
