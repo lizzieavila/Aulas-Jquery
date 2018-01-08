@@ -17,7 +17,7 @@
 			//incluir a codificação javascript aqui
 			//ex 01 chamar json
 
-       $.$.getJSON('produtos.json', function(data) {
+       $.getJSON('produtos.json', function(data) {
        		var elemento;
 
        		elemento= "<ul>";
@@ -25,7 +25,7 @@
        			elemento += "<li>" + valor.nomeproduto + "<>";
        		});
        		elemento += "</ul>";
-       		
+
        		$('#listagem').html(elemento);
        });
 			
