@@ -1,0 +1,183 @@
+//////////comandos jquery///////////////
+
+=====================================
+$(elemento).uma_acao();
+elemento pode ser classe ,id, tag etc
+=====================================
+$(document).ready();
+jquery  executa apos carregar pag
+=====================================
+$(document).ready(function(){	
+});
+=====================================
+$().addClass();
+$().removeClass();
+
+$(document).ready(function(){
+	$('h1').addClass('efeito');
+});
+=====================================
+Seletores
+
+$(document).ready(function(){
+        	$('#div1').click(function(){
+        		alert('Elemento foi clicado');
+        		});
+        });
+
+        		//eventos mouse:
+				//.click()
+				//.dbclick()
+				//.mouseover()
+				//.mouseout()
+
+				//eventos teclado:
+				//.keydown() ao pressionar botao
+				//.keypress() nao conta algumas teclas como alt,shift,ctrl,esc
+				//.keyup() ao soltar
+
+				//eventos forms:
+				//.focus() ao receber foco
+				//.blur() ao perder foco
+				//.change()
+				//.mouseout()	
+       	
+==========================================
+Scroll
+
+
+$(document).ready(function (){
+            $("#click").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#primeira").offset().top
+                }, 1000);
+            });            
+        });
+============================================
+Atributos
+
+ $(function(e){
+        	$("#rex").attr("title","Dinossauro");                     
+        });
+=============================================
+Remover, alterar e embrulhar
+
+$(function(e){
+        	$("li:last").remove();        	
+        	$("li:first").replaceWith("<li>Curso 44</li>");
+        	$("ul").wrapAll("<div style='border:1px solid #ccc'></div>");        	
+        });
+==============================================        
+Bide
+
+function aplicarCor(e){
+       	$cor = e.data.cor;
+       
+        $('#janela').css("background-color",$cor);
+       }
+       $(function(e){
+       $('#azul').bind("click",{cor:'blue'},aplicarCor);
+       $('#vermelho').bind("click",{cor:'red'},aplicarCor);
+       $('#verde').bind("click",{cor:'green'},aplicarCor);
+       });
+===============================================
+Hide show
+
+function exibeElementoPorTag(tag){
+				$(tag).show();  			}
+			function ocultaElementoPorTag(tag){
+				$(tag).hide();  			}
+			function exibeElementoPorClasse(classe){
+				$('.'+classe).show();		}
+			function ocultaElementoPorClasse(classe){
+				$('.'+classe).hide();		}
+			function exibeElementoPorId(id){
+				$('#'+id).show();			}
+			function ocultaElementoPorId(id){
+				$('#'+id).hide();       	}
+============================================================
+Criar e pegar conteudo
+
+$(function(e){
+        	$("h1").html("CURSOS");
+        	$("#lista_cursos").append("<li>CURSO 5</li>");
+        	// append apos
+           //.prepend antes
+        });
+============================================================		
+Insert
+
+.insertAfter
+       .insertBefore
+        ex
+		//$(function(e)({
+		//$("<li><img src.....></li>").insertaAfter ("li:last-child"); ///antes da ultima
+		                                          ("li:first-child");///antes da primeira
+		                                          ("li:nth(2)");///antes da posicao
+	        //}));
+===============================================        	
+Animaçoes
+
+$(function(e){
+       	$('#mostrar').click(mostrar)
+       	$('#esconder').click(esconder)
+       	$('#reverso').click(reverso)
+       });
+       function mostrar(){
+       	$('#janela').show(300);}       
+       function esconder(){
+       	$('#janela').hide(300);}      
+       function reverso(){
+       	$('#janela').toggle(300);}      
+---------------------------------------
+function mostrar(){
+       	$('#janela').fadeIn(1000);}
+       function esconder(){
+       	$('#janela').fadeOut(1000);}       	
+       function reverso(){
+       	$('#janela').fadeToggle(1000);
+       }
+----------------------------------------  
+function mostrar(){
+       	$('#janela').slideUp(1000);}
+       function esconder(){
+       	$('#janela').slideDown(1000);}       	
+       function reverso(){
+       	$('#janela').slideToggle(1000);
+       }     
+------------------------------------------
+function moverObjeto(){
+       	$('#janela').animate({left:300
+       	},1000);}       
+       	$(function(e){
+       		$('#direita').click(moverObjeto);
+       	});
+================================================      
+Redimencionar janela
+
+JQuery(document).ready(function(){
+        		console.log("A altura da minha jenla é:" + $(window).height());
+        		console.log("A largura da minha jenla é:" + $(window).widht());
+        		console.log("A altura da minha jenla é:" + $(document).height());
+        		console.log("A largura da minha jenla é:" + $(document).widht());
+        	});
+==================================================
+Carregar ajax
+
+ $('div#curso').load('dados.txt');
+-------------------------------------------------
+ $.ajax({
+                url:'nome.php'
+            }).then(sucesso,falha);
+            function sucesso(valor){
+                $('div#nome').html('valor');}
+            function falha(){
+                $('div#nome').html('falha no carregamento');}        	
+---------------------------------------------------    
+$.ajax({
+                url:'nome.php'
+            }).then(sucesso,falha);
+            function sucesso(valor){
+                $('div#nome').html('valor');            }
+            function falha(){
+                $('div#nome').html('falha no carregamento');            }        
